@@ -1,17 +1,9 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Mrs. Dennis Schulist",
-      "username": "Leopoldo_Corkery",
-      "email": "Karley_Dach@jasper.info",
-      "phone": "1-477-935-8478 x6430",
-      "website": "ola.org"
-    },
-    {
       "id": 2,
-      "name": "Kurtis Weissnat",
-      "username": "Elwyn.Skiles",
+      "name": "Isha Hasham",
+      "username": "i.s",
       "email": "Telly.Hoeger@billy.biz",
       "phone": "210.067.6132",
       "website": "elvis.io"
@@ -26,9 +18,9 @@
     },
     {
       "id": 4,
-      "name": "Glenna Reichert",
-      "username": "Delphine",
-      "email": "Chaim_McDermott@dana.io",
+      "name": "sara",
+      "username": "saraali",
+      "email": "saraali@gmail.com",
       "phone": "(775)976-6794 x41206",
       "website": "conrad.com"
     },

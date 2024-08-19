@@ -1,33 +1,34 @@
-import React, { useEffect, useState } from 'react'
-import Tables from '../Components/Tables'
-import axios from 'axios';
-import { Box, Button } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import Tables from "../Components/Tables";
+import axios from "axios";
+import { Box, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-    const [userData,setUserData]=useState([]);
-    const navigate =useNavigate();
+  const [userData, setUserData] = useState([]);
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/users")
+      .then((res) => setUserData(res.data))
+      .catch((err) => console.log(err));
+  }, []);
 
-    useEffect(()=>{
-        axios.get('http://localhost:3000/users')
-        .then((response)=> setUserData(response.data))
-        .catch((error)=>console.log(error))
-    }, [])
-    
+  console.log(userData);
+
   return (
-    <div>
-        <h1>
-            Table
-        </h1>
-        <Box>
-            <Button onClick={()=> navigate('/newuser')} 
-                sx={{float:"right" ,marginBottom: 3 }} variant='contained'>
-            Create New User
-            </Button>
-        </Box>
-      <Tables data={userData}/>
-    </div>
-  )
-}
+    <Box>
+      <Button
+        onClick={() => navigate("/createUser")}
+        sx={{ marginBottom: 5, float: "right", marginTop: 3 }}
+        variant="contained"
+      >
+        Create new User
+      </Button>
+      <Tables data={userData} />
+    </Box>
+  );
+};
 
-export default Home
+export default Home;
